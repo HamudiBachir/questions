@@ -1,20 +1,24 @@
-#man muss bevor man flask run macht,
-#in den ordner über cd gehen, also in den webapp ordner unten in der konsole
-from flask import Flask, redirect, url_for
+#------------------------------------------------
 
-app = Flask(__name__)
-@app.route('/')
+#name: questions
+#info: bau einer website mit flask
+#version: 0.1
+#devs: furkan adigüzel, muhammad el bahir, kâan turan
+
+#notes:
+#       flask run - startet website
+
+#------------------------------------------------
 
 
+#import des flask objektes
+from flask import Flask, render_template
 
-def index():
-    return redirect(url_for('foo_function'))
-@app.route('/fowo') #link erweiterung
+app = Flask(__name__) #hält den namen des python moduls
 
-def foo_function():
-    return 'Hello'
-@app.route('/bar')
+@app.route('/') #wenn die webpage abgefragt wird dann startet die software von hier
 
-def bar_function():
-    return redirect('/foo') # Not recommended to give redirect() a hard-coded UR
+def main():
+    return render_template('index.html')
+
 
