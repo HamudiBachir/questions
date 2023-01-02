@@ -11,8 +11,8 @@
 #------------------------------------------------
 
 
-#import des flask objektes
-from flask import Flask, render_template
+from flask import Flask, session, render_template, request, g
+import sqlite3
 
 #templates = ordner für html files
 #static_folder = ordner für css files
