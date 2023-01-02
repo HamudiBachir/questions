@@ -9,9 +9,9 @@ def get(pragma_foreign_keys = True): #stellt verbindung mit der datenbank her
         g.db_con = sqlite3.connect(current_app.config['DATABASE'], detect_types=sqlite3.PARSE_DECLTYPES)
         g.db_con.row_factory = sqlite3.Row
     
-    if pragma_foreign_keys:
-        g.db_con.execute('PRAGMA foreign_keys = ON;')
-        return g.db_con
+        if pragma_foreign_keys:
+            g.db_con.execute('PRAGMA foreign_keys = ON;')
+    return g.db_con
 
 
 def close(e=None): #trennt die verbindung mit der datenbank
@@ -35,3 +35,10 @@ def init():
     with current_app.open_resource('sql/create_tables.sql') as f:
         db_con.executescript(f.read().decode('utf8'))
     click.echo('Database has been initialized.')
+
+
+#dass was eingefügt wird in die datenbank ist auch bei app.py da
+def insert_sample():
+    db = get()
+    with current_app.open_resource('sql/insert_sample.sql') as f:
+        db.executescript(f.read().decode('utf8'))
