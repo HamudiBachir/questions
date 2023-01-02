@@ -1,3 +1,20 @@
-p {
-    color: red;
+#question {
+    text-align: center;
+    margin-top: 5%;
+}
+#answersBox { /* die box wo die antwort buttons drinnen sind */
+    background-color: brown;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+
+    height: 50px;
+    width: 80%;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+#answerButton { /* die einzelnen buttons in der antwort box*/
+    height: 80%;
+    width: 30%;
 }
