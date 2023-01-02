@@ -3,4 +3,4 @@ Fragen Webseite
 
 *hier steht noch nicht viel*
 
-hallo
+furkan 2.0 ist bessser
