@@ -12,7 +12,7 @@ def index():
 @app.route('/fowo') #link erweiterung
 
 def foo_function():
-    return 'Hellolljdjndqkw'
+    return 'Hello'
 @app.route('/bar')
 
 def bar_function():
