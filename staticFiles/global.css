@@ -1,3 +1,7 @@
+body {
+    background-color: aliceblue;
+}
+
 #question {
     text-align: center;
     margin-top: 5%;
