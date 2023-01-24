@@ -2,7 +2,7 @@
 # info: bau einer website mit flask
 # version: 0.1
 # author: furkan adigüzel, muhammad el bahir, kâan turan
-#
+#Hamudiistderbeste
 # overview:
 #   templates = ordner für html files
 #   staticFiles = ordner für css files
